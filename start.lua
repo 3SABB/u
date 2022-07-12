@@ -8662,7 +8662,7 @@ if text == "تمام" then
 if redis:get(bot_id..":"..msg.chat_id..":Rdodbot") then
 return bot.sendText(msg.chat_id,msg.id,"md",true)  
 end
-nameBot = {"تـدوم عمࢪيي💘","دومـك/ج قـلبـي💘","دومـك/ج ياربي☹️","يـدوم احـبابـك/ج🥺"}
+nameBot = {"تـدوم عمࢪيي💘","دومـك/ج قـلبـي💘","دومـك/ج ياربي☹️","عساك يروحي🥺💞"}
 bot.sendText(msg.chat_id,msg.id," .*"..nameBot[math.random(#nameBot)].." .*","md",true)  
 end
 if text == "😐" then
