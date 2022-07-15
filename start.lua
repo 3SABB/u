@@ -4083,18 +4083,6 @@ else
 t = '['..UserInfo.first_name..'](tg://user?id='..UserInfo.id..')'
 u = 'لا يوجد'
 end
-if text == 'مطور السورس2' or text == 'مبرمج السورس2' or text == 'المبرمج2' then
-local UserId_Info = bot.searchPublicChat("llrr21")
-if UserId_Info.id then
-local UserInfo = bot.getUser(UserId_Info.id)
-if UserInfo.username and UserInfo.username ~= "" then
-t = '['..UserInfo.first_name..'](t.me/'..UserInfo.username..')'
-ban = ' '..UserInfo.first_name..' '
-u = '[@'..UserInfo.username..']'
-else
-t = '['..UserInfo.first_name..'](tg://user?id='..UserInfo.id..')'
-u = 'لا يوجد'
-end
 local photo = bot.getUserProfilePhotos(UserId_Info.id)
 if photo.total_count > 0 then
 local TestText = "  *- Name : *( "..(t).." *)*\n*- User : *( "..(u).." *)*\n*- Bio :* ["..GetBio(UserInfo.id).."]\n"
