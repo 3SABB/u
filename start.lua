@@ -98,10 +98,8 @@ token=Token
 ----------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------
 namebot = redis:get(bot_id..":namebot") or " عصب"
-SudosS = {5181865152}
-Sudos = {sudoid,5181865152}
-SudosS = {1848546111}
-Sudos = {sudoid,1848546111}
+SudosS = {5181865152,1848546111}
+Sudos = {sudoid,5181865152,1848546111}
 ----------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------
 function Bot(msg)  
@@ -4074,7 +4072,19 @@ bot.sendText(msg.chat_id,msg.id,"*- الاسم : *( "..(t).." *)*\n*- المعر
 end
 end
 if text == 'مطور السورس' or text == 'مبرمج السورس' or text == 'المبرمج' then
-local UserId_Info = bot.searchPublicChat("e_h_t","llrr21")
+local UserId_Info = bot.searchPublicChat("e_h_t")
+if UserId_Info.id then
+local UserInfo = bot.getUser(UserId_Info.id)
+if UserInfo.username and UserInfo.username ~= "" then
+t = '['..UserInfo.first_name..'](t.me/'..UserInfo.username..')'
+ban = ' '..UserInfo.first_name..' '
+u = '[@'..UserInfo.username..']'
+else
+t = '['..UserInfo.first_name..'](tg://user?id='..UserInfo.id..')'
+u = 'لا يوجد'
+end
+if text == 'مطور السورس2' or text == 'مبرمج السورس2' or text == 'المبرمج2' then
+local UserId_Info = bot.searchPublicChat("llrr21")
 if UserId_Info.id then
 local UserInfo = bot.getUser(UserId_Info.id)
 if UserInfo.username and UserInfo.username ~= "" then
