@@ -98,8 +98,8 @@ token=Token
 ----------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------
 namebot = redis:get(bot_id..":namebot") or " عصب"
-SudosS = {1848546111}
-Sudos = {sudoid,1848546111}
+SudosS = {5181865152,1693233753}
+Sudos = {sudoid,5181865152,1693233753}
 ----------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------
 function Bot(msg)  
@@ -4072,7 +4072,7 @@ bot.sendText(msg.chat_id,msg.id,"*- الاسم : *( "..(t).." *)*\n*- المعر
 end
 end
 if text == 'مطور السورس' or text == 'مبرمج السورس' or text == 'المبرمج' then
-local UserId_Info = bot.searchPublicChat("e_h_t")
+local UserId_Info = bot.searchPublicChat("llrr21")
 if UserId_Info.id then
 local UserInfo = bot.getUser(UserId_Info.id)
 if UserInfo.username and UserInfo.username ~= "" then
@@ -8837,9 +8837,9 @@ local Text = "*- 𝘞𝘌𝘓𝘤𝘰𝘮𝘦 𝘵𝘰 3𝘴𝘢𝘣 𝘵𝘦�
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = '-  3𝘴𝘢𝘣 𝘵𝘦𝘢𝘮 .',url="https://t.me/k_e_r"}},
-{{text = '- 𝘪𝘯𝘧𝘰 3𝘴𝘢𝘣 .',url="https://t.me/FF0CC"}},
-{{text = '- 𝘋𝘌𝘷𝘦𝘭𝘰𝘱𝘦𝘳 .',url="https://t.me/e_h_t"}},
-{{text = '- 2𝘋𝘌𝘷𝘦𝘭𝘰𝘱𝘦𝘳 .',url="https://t.me/llrr21"}},
+{{text = '- 𝘪𝘯𝘧𝘰 3𝘴𝘢𝘣 .',url="https://t.me/SI3SAB"}},
+{{text = '- 𝘋𝘌𝘷𝘦𝘭𝘰𝘱𝘦𝘳 .',url="https://t.me/llrr21"}},
+{{text = '- لطلب نسخه .',url="https://t.me/e_h_t"}},
 }
 https.request("https://api.telegram.org/bot"..Token.."/sendphoto?chat_id=" .. msg.chat_id .. "&photo=https://t.me/k_e_r&caption=".. URL.escape(Text).."&photo=0&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
